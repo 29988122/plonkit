@@ -83,7 +83,7 @@ version = "0.3.2"
 source = "git+https://github.com/matter-labs/bellman?branch=beta#48441155ec7006bf7bfac553b5fb7d466d7fcd00"
 dependencies = [
  "bit-vec",
- "blake2s_const 0.6.0 (git+https://github.com/matter-labs/bellman?branch=beta)",
+ "blake2s_const",
  "blake2s_simd",
  "byteorder",
  "cfg-if 1.0.0",
@@ -92,27 +92,7 @@ dependencies = [
  "hex",
  "lazy_static",
  "num_cpus",
- "pairing_ce 0.24.2",
- "rand 0.4.6",
- "tiny-keccak",
-]
-
-[[package]]
-name = "bellman_ce"
-version = "0.3.2"
-source = "git+https://github.com/matter-labs/bellman?branch=circuit_description#8f4e25d626ed9b96a20abd39caceb8e85c2b4600"
-dependencies = [
- "bit-vec",
- "blake2s_const 0.6.0 (git+https://github.com/matter-labs/bellman?branch=circuit_description)",
- "blake2s_simd",
- "byteorder",
- "cfg-if 0.1.10",
- "crossbeam",
- "futures 0.3.12",
- "hex",
- "lazy_static",
- "num_cpus",
- "pairing_ce 0.22.0",
+ "pairing_ce",
  "rand 0.4.6",
  "tiny-keccak",
 ]
@@ -120,9 +100,9 @@ dependencies = [
 [[package]]
 name = "bellman_vk_codegen"
 version = "0.1.0"
-source = "git+https://github.com/Fluidex/solidity_plonk_verifier.git?branch=bata_recursive#68ef682cf809baf00ae9b60a8bd2dde38c1e3da1"
+source = "git+https://github.com/Fluidex/solidity_plonk_verifier.git?branch=bata_recursive#53aeeafe6e20c1a25f3b69c951d36aebc565ad4a"
 dependencies = [
- "bellman_ce 0.3.2 (git+https://github.com/matter-labs/bellman?branch=circuit_description)",
+ "bellman_ce",
  "handlebars",
  "hex",
  "serde_json",
@@ -145,16 +125,6 @@ checksum = "cf1de2fe8c75bc145a2f577add951f8134889b4795d47466a54a5c846d691693"
 name = "blake2s_const"
 version = "0.6.0"
 source = "git+https://github.com/matter-labs/bellman?branch=beta#48441155ec7006bf7bfac553b5fb7d466d7fcd00"
-dependencies = [
- "arrayref",
- "arrayvec 0.5.2",
- "constant_time_eq",
-]
-
-[[package]]
-name = "blake2s_const"
-version = "0.6.0"
-source = "git+https://github.com/matter-labs/bellman?branch=circuit_description#8f4e25d626ed9b96a20abd39caceb8e85c2b4600"
 dependencies = [
  "arrayref",
  "arrayvec 0.5.2",
@@ -448,40 +418,14 @@ checksum = "e88a8acf291dafb59c2d96e8f59828f3838bb1a70398823ade51a84de6a6deed"
 
 [[package]]
 name = "ff_ce"
-version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d3a682c12d0cc98a32ab7540401a5ea1ed21d11571eea11d5829cd721f85ff0"
-dependencies = [
- "byteorder",
- "ff_derive_ce 0.8.0",
- "hex",
- "rand 0.4.6",
-]
-
-[[package]]
-name = "ff_ce"
 version = "0.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "38107cbd8bac0d907d7e7513c9f68c95adbda9e6f6f6bdf3f5111c6ecac4fe47"
 dependencies = [
  "byteorder",
- "ff_derive_ce 0.9.0",
+ "ff_derive_ce",
  "hex",
  "rand 0.4.6",
-]
-
-[[package]]
-name = "ff_derive_ce"
-version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "50c052fa6d4c2f12305ec364bfb8ef884836f3f61ea015b202372ff996d1ac4b"
-dependencies = [
- "num-bigint",
- "num-integer",
- "num-traits",
- "proc-macro2 1.0.24",
- "quote 1.0.9",
- "syn 1.0.60",
 ]
 
 [[package]]
@@ -890,24 +834,13 @@ checksum = "2839e79665f131bdb5782e51f2c6c9599c133c6098982a54c794358bf432529c"
 
 [[package]]
 name = "pairing_ce"
-version = "0.22.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "337865171b276a7cf6fef3ce5326a1ecc97e59f969949c87a962d0d8e24cbdcc"
-dependencies = [
- "byteorder",
- "ff_ce 0.11.0",
- "rand 0.4.6",
-]
-
-[[package]]
-name = "pairing_ce"
 version = "0.24.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e753515675eaaa98071d814bea0148ae8c9d7995fa0531bf222e7857e3f1759"
 dependencies = [
  "byteorder",
  "cfg-if 1.0.0",
- "ff_ce 0.12.0",
+ "ff_ce",
  "rand 0.4.6",
 ]
 
@@ -1014,7 +947,7 @@ name = "plonkit"
 version = "0.0.4"
 dependencies = [
  "anyhow",
- "bellman_ce 0.3.2 (git+https://github.com/matter-labs/bellman?branch=beta)",
+ "bellman_ce",
  "bellman_vk_codegen",
  "byteorder",
  "cfg-if 1.0.0",
